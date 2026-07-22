@@ -6,6 +6,19 @@ culminating in **Nav2 map-based autonomous navigation**.
 
 Tested with **ROS 2 Jazzy** on Ubuntu 24.04 (WSL2).
 
+![Mini-AMR autonomous navigation in RViz2](deliverables/navigation.gif)
+
+> *Mini-AMR localizing on a saved map and autonomously navigating to a goal in
+> RViz2 — the green line is the Nav2 global path.*
+
+## Key Results
+
+- **ROS 2 Jazzy** on Ubuntu 24.04
+- **SLAM Toolbox** — occupancy-grid mapping from LiDAR
+- **Nav2** — autonomous navigation (localization → global planning → control)
+- **Goal reached successfully** — behaviour-tree result `SUCCEEDED`
+- **Position error: 4.2 cm** (goal `(1.0, 0.8)` reached at `(1.04, 0.79)`)
+
 ---
 
 ## 1. Project overview
@@ -291,6 +304,12 @@ All submission artefacts live in [`deliverables/`](deliverables/):
 | `final_map.pgm` / `final_map.yaml` | Saved occupancy map used for navigation (copy of `task11_map`) |
 | `mini_amr_navigation.rviz` | Navigation RViz2 configuration (copy of `nav2.rviz`) |
 
+> **Note:** `final_map.*` and `mini_amr_navigation.rviz` are self-contained
+> convenience copies of `src/mini_amr_navigation/maps/task11_map.*` and
+> `src/mini_amr_navigation/rviz/nav2.rviz`, kept here so the `deliverables/`
+> folder is a complete, standalone submission snapshot. The packages build and
+> run from the versions under `src/`.
+
 ---
 
 ## Repository layout
@@ -306,7 +325,7 @@ amr_ws/
 │       ├── config/             nav2_params.yaml
 │       ├── launch/             navigation.launch.py
 │       ├── maps/               task10_map (raw SLAM), task11_map (denoised, default)
-│       └── rviz/               nav2.rviz, navigation.rviz
+│       └── rviz/               nav2.rviz
 ├── deliverables/               demo video, screenshots, notes, saved map
 ├── tools/                      denoise_map.py, record_nav.sh, plot_nav.py
 ├── README.md
@@ -315,3 +334,10 @@ amr_ws/
 
 `build/`, `install/` and `log/` are not committed — run `colcon build` after
 cloning.
+
+---
+
+## License
+
+This project is licensed under the Apache License 2.0.
+See the LICENSE file for details.

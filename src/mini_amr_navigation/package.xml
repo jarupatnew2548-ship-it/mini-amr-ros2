@@ -2,10 +2,10 @@
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>mini_amr_navigation</name>
-  <version>0.0.0</version>
+  <version>1.0.0</version>
   <description>Nav2 map-based navigation (localization, planning and control)
     for the simulated Mini-AMR.</description>
-  <maintainer email="nj@todo.todo">nj</maintainer>
+  <maintainer email="jarupatnew2548@gmail.com">Jarupat Jaruvatee</maintainer>
   <license>Apache-2.0</license>
 
   <test_depend>ament_copyright</test_depend>

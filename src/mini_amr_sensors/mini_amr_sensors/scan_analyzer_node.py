@@ -17,7 +17,7 @@ class ScanAnalyzerNode(Node):
             10
         )
 
-        # publisher (FIX สำคัญ)
+        # Publisher for obstacle warning information
         self.alert_pub = self.create_publisher(Bool, '/obstacle_alert', 10)
 
         self.safety_threshold = 0.5

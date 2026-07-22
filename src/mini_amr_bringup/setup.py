@@ -8,7 +8,7 @@ package_name = 'mini_amr_bringup'
 
 setup(
     name=package_name,
-    version='0.0.0',
+    version='1.0.0',
     packages=find_packages(exclude=['test']),
     data_files=[
         (
@@ -32,9 +32,9 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='nj',
-    maintainer_email='nj@todo.todo',
-    description='Bringup launch files for the Mini-AMR robot.',
+    maintainer='Jarupat Jaruvatee',
+    maintainer_email='jarupatnew2548@gmail.com',
+    description='Bringup launch files for the Mini-AMR (robot bringup and SLAM demo).',
     license='Apache-2.0',
     extras_require={
         'test': [

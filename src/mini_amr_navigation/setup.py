@@ -6,7 +6,7 @@ package_name = 'mini_amr_navigation'
 
 setup(
     name=package_name,
-    version='0.0.0',
+    version='1.0.0',
     packages=find_packages(exclude=['test']),
 
     data_files=[
@@ -23,7 +23,7 @@ setup(
             ['config/nav2_params.yaml']),
 
         ('share/mini_amr_navigation/rviz',
-            ['rviz/navigation.rviz', 'rviz/nav2.rviz']),
+            ['rviz/nav2.rviz']),
 
         ('share/mini_amr_navigation/maps',
             glob('maps/*.yaml') + glob('maps/*.pgm')),
@@ -31,10 +31,11 @@ setup(
 
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='nj',
-    maintainer_email='nj@todo.todo',
-    description='TODO: Package description',
-    license='TODO: License declaration',
+    maintainer='Jarupat Jaruvatee',
+    maintainer_email='jarupatnew2548@gmail.com',
+    description='Nav2 map-based navigation (localization, planning and control) '
+                'for the simulated Mini-AMR.',
+    license='Apache-2.0',
 
     extras_require={
         'test': [

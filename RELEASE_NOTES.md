@@ -73,6 +73,10 @@ successful.
 - Add unit/integration tests and a GitHub Actions CI workflow
   (`colcon build` + `colcon test`).
 
+## License
+
+Released under the **Apache License 2.0** — see [`LICENSE`](LICENSE) for details.
+
 ---
 
 *This is the initial public release (v1.0.0).*

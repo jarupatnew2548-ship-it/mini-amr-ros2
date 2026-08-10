@@ -1,8 +1,29 @@
-# Release Notes — Mini-AMR ROS 2 v1.0.0
+# Release Notes — Mini-AMR ROS 2
 
 **Platform:** ROS 2 Jazzy Jalisco · Ubuntu 24.04.4 LTS (WSL2) · Python 3.12
 
 ---
+
+## v1.1.0 — Presentation deck & refreshed demo media
+
+- Added `deliverables/ROS2_MiniAMR_Presentation.pptx` — a 10-slide deck with
+  embedded, per-stage demo video clips and speaker notes.
+- Re-recorded all demo clips (`clip_robot`, `clip_safety`, `clip_slam`,
+  `clip_nav`) from live ROS 2 / RViz2 sessions at native window resolution,
+  with the camera's `Target Frame` locked to `base_footprint` so the robot
+  stays centered regardless of drift — this also fixes a constant
+  viewport-rendering offset in RViz's `TopDownOrtho` camera that had pushed
+  the subject toward the edge of frame in earlier captures.
+- Added a new 3D-perspective cover image (`title_hero_new.png`) showing the
+  robot model with the live LiDAR scan cloud.
+- Added `src/mini_amr_navigation/rviz/slam.rviz`, a dedicated RViz config for
+  the SLAM demo (previously it launched with RViz's blank default).
+- Removed superseded screenshots, an old GIF and duplicate map/RViz-config
+  copies from `deliverables/` in favor of the video clips above.
+
+---
+
+## v1.0.0
 
 ## Project overview
 
@@ -34,19 +55,17 @@ ROS 2 and Nav2 installed.
 ## Final deliverables (`deliverables/`)
 
 - `Mini_AMR_Final_Report.pdf` / `.docx` — final technical report
-- `mini_amr_final_demo.mp4` — 60 s, 1280×720 demonstration video
-- `NAVIGATION_NOTES.md` — navigation architecture and results write-up
-- `navigation.gif`, `rviz_map_path.png`, `rviz_map_pose.png`,
-  `rviz_fullwindow.png`, `map_path_plot.png` — RViz captures and plots
-- `final_map.pgm` / `final_map.yaml` — saved occupancy map
-- `mini_amr_navigation.rviz` — navigation RViz configuration
+- `mini_amr_final_demo.mp4` — 60 s, 1920×1080 demonstration video
+
+> See the [v1.1.0 notes above](#v110--presentation-deck--refreshed-demo-media)
+> for the current presentation deck and per-stage demo clips.
 
 ### Verified result
 
-Goal `(1.0, 0.8)` reached at `(1.04, 0.79)` — final position error **4.2 cm**;
+Goal `(1.00, 0.80)` reached at `(1.004, 0.836)` — final position error **3.6 cm**;
 behaviour-tree result **`SUCCEEDED`** (`controller_server: "Reached the goal!"`,
-`bt_navigator: "Goal succeeded"`). Repeat runs: 5.5 cm and 9.6 cm error, 3/3
-successful.
+`bt_navigator: "Goal succeeded"`). Repeat runs consistently succeeded within
+tolerance.
 
 ## Known limitations
 

@@ -22,17 +22,16 @@
 
 | File | Description |
 |------|-------------|
+| `ROS2_MiniAMR_Presentation.pptx` | Full 10-slide presentation deck with embedded demo video clips and speaker notes |
 | `Mini_AMR_Final_Report.pdf` | Final technical report (PDF) |
 | `Mini_AMR_Final_Report.docx` | Final technical report (source document) |
-| `NAVIGATION_NOTES.md` | Navigation write-up: architecture, process, config decisions, results |
-| `mini_amr_final_demo.mp4` | 60 s / 1280×720 demonstration video |
-| `navigation.gif` | RViz2 animation of the robot driving to the goal |
-| `rviz_map_path.png` | RViz2 — map + robot + global path `/plan` |
-| `rviz_map_pose.png` | RViz2 — map + robot at initial pose |
-| `rviz_fullwindow.png` | RViz2 — full-window view (Displays panel + scene) |
-| `map_path_plot.png` | Recorded run: planned path + executed trajectory + goal reached |
-| `final_map.pgm` / `final_map.yaml` | Saved occupancy map (copy of `task11_map`) |
-| `mini_amr_navigation.rviz` | Navigation RViz2 configuration (copy of `nav2.rviz`) |
+| `mini_amr_final_demo.mp4` | 60 s / 1920×1080 demonstration video |
+| `nav_goal_new.png` | Poster frame for the master demo video |
+| `title_hero_new.png` | 3D robot model + LiDAR scan cover image |
+| `clip_robot.mp4` / `poster_robot.png` | Robot model + live LaserScan (robot-centered) |
+| `clip_safety.mp4` / `poster_safety.png` | Safety-zone markers reacting to a near obstacle |
+| `clip_slam.mp4` / `poster_slam.png` | SLAM Toolbox building the occupancy grid live |
+| `clip_nav.mp4` / `poster_nav.png` | Nav2 planning a path and reaching the goal |
 
 ## Tools (`tools/`)
 
@@ -77,7 +76,7 @@ ros2 action send_goal /navigate_to_pose nav2_msgs/action/NavigateToPose \
 
 ## Verified result
 
-Goal `(1.0, 0.8)` reached at `(1.04, 0.79)` — final error **4.2 cm**;
+Goal `(1.00, 0.80)` reached at `(1.004, 0.836)` — final error **3.6 cm**;
 behaviour-tree result **`SUCCEEDED`**.
 
 ---
@@ -92,7 +91,7 @@ amr_ws/
 │   ├── mini_amr_sensors/        simulated LiDAR, scan analyzer, safety markers
 │   ├── mini_amr_bringup/        robot.launch.py, slam_demo.launch.py
 │   └── mini_amr_navigation/     navigation.launch.py, nav2_params.yaml, maps/, rviz/, nav_demo_recorder
-├── deliverables/               report (pdf/docx), demo video, screenshots, notes, saved map
+├── deliverables/               presentation, report (pdf/docx), demo video + per-stage clips, posters
 ├── tools/                      denoise_map.py, record_nav.sh, plot_nav.py
 ├── README.md
 ├── SUBMISSION_CONTENTS.md

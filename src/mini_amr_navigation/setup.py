@@ -23,7 +23,7 @@ setup(
             ['config/nav2_params.yaml']),
 
         ('share/mini_amr_navigation/rviz',
-            ['rviz/nav2.rviz']),
+            ['rviz/nav2.rviz', 'rviz/slam.rviz']),
 
         ('share/mini_amr_navigation/maps',
             glob('maps/*.yaml') + glob('maps/*.pgm')),
